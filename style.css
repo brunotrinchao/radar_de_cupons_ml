@@ -1,0 +1,165 @@
+:root {
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --text: #1e2a3b;
+  --muted: #5b6a81;
+  --primary: #ffe600;
+  --primary-shadow: #ccb700;
+  --secondary: #3483fa;
+  --secondary-shadow: #255db2;
+  --border: #d9e1ef;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  width: 360px;
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.header {
+  background: linear-gradient(140deg, #1f3366 0%, #3483fa 100%);
+  color: #fff;
+  padding: 12px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.header p {
+  margin: 6px 0 0;
+  font-size: 11px;
+  opacity: 0.95;
+}
+
+.container {
+  padding: 12px;
+}
+
+.input-group {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+input {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 13px;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--secondary);
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 11px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #263347;
+  background: var(--primary);
+  box-shadow: 0 4px 0 var(--primary-shadow);
+}
+
+button.secondary {
+  color: #fff;
+  background: var(--secondary);
+  box-shadow: 0 4px 0 var(--secondary-shadow);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+.status {
+  margin-top: 10px;
+  background: #ebeff7;
+  color: var(--muted);
+  border-radius: 8px;
+  text-align: center;
+  padding: 8px;
+  font-size: 12px;
+}
+
+.status.active {
+  background: #e6f0ff;
+  color: #2059b4;
+  font-weight: 700;
+}
+
+.logs {
+  margin-top: 10px;
+}
+
+.logs h2 {
+  margin: 0 0 6px;
+  font-size: 12px;
+}
+
+.log-container {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  max-height: 150px;
+  overflow-y: auto;
+  padding: 4px;
+}
+
+.log-item {
+  padding: 7px;
+  font-size: 11px;
+  border-bottom: 1px solid #eff3fa;
+  color: #236337;
+}
+
+.empty {
+  color: #98a3b9;
+  text-align: center;
+  font-size: 11px;
+  padding: 14px;
+}
+
+.toast-container {
+  position: fixed;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  pointer-events: none;
+}
+
+.toast {
+  border-radius: 8px;
+  color: #fff;
+  font-size: 11px;
+  padding: 8px;
+}
+
+.toast.info { background: #2f6fda; }
+.toast.success { background: #2e7d32; }
+.toast.error { background: #b3261e; }

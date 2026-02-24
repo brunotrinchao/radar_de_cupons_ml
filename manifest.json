@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Radar de Cupons ML",
+  "version": "2.0.0",
+  "description": "Captura e aplica cupons no Mercado Livre.",
+  "permissions": [
+    "alarms",
+    "scripting",
+    "storage",
+    "tabs",
+    "webNavigation"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "host_permissions": [
+    "https://*.mercadolivre.com.br/*"
+  ],
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

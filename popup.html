@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header">
+    <h1>Radar de Cupons ML</h1>
+    <p>Automação exclusiva para aplicar cupons na página de cupons.</p>
+  </div>
+
+  <main class="container">
+    <div class="input-group">
+      <label for="filtroTexto">Filtro (opcional)</label>
+      <input id="filtroTexto" type="text" placeholder="Ex: frete, supermercado">
+    </div>
+
+    <div class="input-group">
+      <label for="agendamento">Agendamento (opcional)</label>
+      <input id="agendamento" type="time" step="1">
+    </div>
+
+    <div class="actions">
+      <button id="btnAplicar" data-action="iniciar">Iniciar</button>
+      <button id="btnPausar" class="secondary">Pausar 2m</button>
+    </div>
+
+    <div id="status" class="status">Pronto para começar</div>
+
+    <section class="logs">
+      <h2>Cupons aplicados</h2>
+      <div id="log-container" class="log-container">
+        <div class="empty">Nenhum cupom aplicado ainda.</div>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
